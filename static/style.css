@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f2e6;
+}
+
+
+/* HEADER */
+
+header {
+    height: 102px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f7f2e6;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #111;
+}
+
+
+/* MAIN */
+
+main {
+    min-height: calc(100vh - 102px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 89px;
+
+    background: linear-gradient(
+        110deg,
+        #526df5 0%,
+        #8f6be5 40%,
+        #c765d0 70%,
+        #ff5fc2 100%
+    );
+}
+
+
+/* PAGE */
+
+.page {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* FORM */
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* EMAIL INPUT */
+
+textarea {
+    width: 532px;
+    height: 80px;
+
+    padding: 20px 38px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 45px;
+
+    background: #d8d5d2;
+
+    color: #111;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #111;
+    opacity: 1;
+}
+
+textarea:focus {
+    background: #e2dfdc;
+}
+
+
+/* BUTTON */
+
+button {
+    width: 168px;
+    height: 67px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: #20d66b;
+
+    color: #111;
+
+    font-size: 28px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #18c45e;
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* RESULT */
+
+.result {
+    margin-top: 30px;
+
+    min-width: 350px;
+
+    padding: 18px 30px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    text-align: center;
+}
+
+.result-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    color: #555;
+
+    text-transform: uppercase;
+}
+
+.result h2 {
+    font-size: 22px;
+
+    font-weight: 500;
+
+    color: #111;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+        height: 90px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        min-height: calc(100vh - 90px);
+        padding: 60px 20px;
+    }
+
+    form {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 532px;
+
+        height: 70px;
+
+        font-size: 20px;
+    }
+
+    button {
+        width: 180px;
+        height: 60px;
+
+        font-size: 23px;
+    }
+
+    .result {
+        width: 90%;
+        min-width: 0;
+    }
+}
